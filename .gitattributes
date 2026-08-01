@@ -1,0 +1,12 @@
+﻿# 统一文本文件换行符: 仓库内用 LF, Windows 检出时转 CRLF
+* text=auto
+
+# 二进制文件不做换行转换
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.bmp binary
+*.pdf binary
+*.bin binary
+*.axf binary
+*.o binary

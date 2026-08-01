@@ -1,0 +1,26 @@
+﻿/*
+ * ============================================================================
+ * 文件: wifi_config.h.example  (提交到仓库的配置模板, 全部为占位符)
+ * 功能: WiFi 账号密码 与 阿里云三元组 配置模板。
+ *
+ * 使用方法(克隆仓库后, 在 Middleware/Network 目录下):
+ *     copy wifi_config.h.example wifi_config.h
+ * 然后打开 wifi_config.h 填入你的真实 WiFi 与阿里云三元组。
+ *
+ * 注意: wifi_config.h 已被 .gitignore 排除, 真实凭据永远不会提交到仓库,
+ *       防止公开仓库泄露设备密钥。
+ * ============================================================================
+ */
+#ifndef WIFI_CONFIG_H
+#define WIFI_CONFIG_H
+
+/* ---- WiFi 账号密码 ---- */
+#define WIFI_NAME       "你的WiFi名字"
+#define WIFI_PWD        "你的WiFi密码"
+
+/* ---- 阿里云后台三元组 ---- */
+#define PRO_ID          "你的ProductKey"
+#define DEV_ID          "你的DeviceName"
+#define DEV_SECRET      "你的DeviceSecret"
+
+#endif /* WIFI_CONFIG_H */

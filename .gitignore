@@ -1,0 +1,44 @@
+﻿# ============================================================
+# Git 忽略规则 —— OTA 升级项目(scan + scan_bootloader)
+# 根目录: C:\Users\zhanw\Desktop\z
+# 策略: 只跟踪 scan 与 scan_bootloader 两个工程, z 下其它目录一律忽略
+# ============================================================
+
+# ---- 只放行两个工程(allowlist) ----
+/*
+!/scan/
+!/scan_bootloader/
+!/.gitignore
+!/.gitattributes
+
+# ---- Keil MDK 编译中间产物(任意目录生效) ----
+*.o
+*.crf
+*.d
+*.axf
+*.lnp
+*.htm
+*.lst
+*.dep
+*.bak
+*.sct
+*.sct.Bak
+*.build_log.htm
+*.uvguix.*
+*.uvoptx
+RTE/
+DebugConfig/
+.vscode/
+
+# ---- 构建输出的可执行/映像文件(想随仓库发布 hex/bin 时, 删掉下面三行即可) ----
+*.hex
+*.bin
+*.map
+
+# ---- 工程内的历史遗留副本(旧工程快照, 与当前构建无关) ----
+/scan/scan/
+
+
+# ---- 本机凭据配置(不入库) ----
+/scan/Middleware/Network/wifi_config.h
+
